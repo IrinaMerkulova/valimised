@@ -25,8 +25,9 @@ if(isset($_REQUEST["avamine"])) {
     <body>
     <h1>Uue nimi lisamine</h1>
     <form action="?">
-        <input type="text" id="uusnimi" name="uusnimi" placeholder="uus nimi">
         <label for="uusnimi">Nimi</label>
+        <input type="text" id="uusnimi" name="uusnimi" placeholder="uus nimi">
+
         <input type="submit" value="OK">
     </form>
     <h1>Valimisnimede haldus</h1>
@@ -63,6 +64,7 @@ if(isset($_REQUEST["avamine"])) {
 <?php
 $yhendus->close();
 //Ülesanne.
+// Lehe värskendamine ei lisa punkti.
 // Haldusleht -võimaldab nimede kustutamine
 // Halduslehel saab punktid panna nulliks
 // Navigeerimismenüü + CSS kujundus

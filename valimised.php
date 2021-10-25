@@ -7,7 +7,7 @@ if(!empty($_REQUEST['uusnimi'])){
     Values (?, Now())');
     $kask->bind_param('s', $_REQUEST['uusnimi']);
     $kask->execute();
-    header:("Location: $_SERVER[PHP_SELF]");
+    header("Location: $_SERVER[PHP_SELF]");
     //$yhendus->close();
 }
 
@@ -17,7 +17,7 @@ if(isset($_REQUEST["haal"])) {
     UPDATE valimised SET punktid=punktid + 1 WHERE id=?');
     $kask->bind_param('i', $_REQUEST["haal"]);
     $kask->execute();
-
+    header("Location: $_SERVER[PHP_SELF]");
 }
 
 ?>
